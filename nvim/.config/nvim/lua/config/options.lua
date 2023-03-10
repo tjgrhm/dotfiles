@@ -32,6 +32,12 @@ local options = {
   pumblend = 10,
   pumheight = 10,
 
+  -- folds
+  foldenable = false,
+  foldexpr = "nvim_treesitter#foldexpr()",
+  foldlevelstart = 99,
+  foldmethod = "expr",
+
   -- backups
   backup = false,
   swapfile = false,
