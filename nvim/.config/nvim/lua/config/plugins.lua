@@ -18,7 +18,7 @@ function m.setup()
 
   require("lazy").setup("plugins", {
     install = {
-      colorscheme = { "default" },
+      colorscheme = { "tokyonight" },
     },
   })
 
