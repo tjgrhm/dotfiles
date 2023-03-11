@@ -10,7 +10,14 @@ local defaults = {
   t = { silent = true }, -- terminal mode
 }
 
-local keymaps = {}
+local keymaps = {
+  n = { -- normal mode
+    -- diagnostic
+    { lhs = "[d", rhs = vim.diagnostic.goto_prev, desc = "goto previous diagnostic" },
+    { lhs = "]d", rhs = vim.diagnostic.goto_next, desc = "goto next diagnostic" },
+    { lhs = "<leader>d", rhs = vim.diagnostic.open_float, desc = "show diagnostics" },
+  },
+}
 
 function m.setup()
   vim.g.mapleader = " "

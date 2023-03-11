@@ -6,6 +6,7 @@ local m = {
   dependencies = {
     { "hrsh7th/cmp-buffer", name = "cmp-buffer" },
     { "hrsh7th/cmp-path", name = "cmp-path" },
+    { "hrsh7th/cmp-nvim-lsp", name = "cmp-nvim-lsp" },
     { "saadparwaiz1/cmp_luasnip", name = "cmp-luasnip" },
   },
   event = { "InsertEnter" },
@@ -14,6 +15,7 @@ local m = {
 local sources = {
   buffer = "[Buffer]",
   path = "[Path]",
+  nvim_lsp = "[LSP]",
   luasnip = "[Snippet]",
 }
 
@@ -101,6 +103,7 @@ function m.config()
       end,
     },
     sources = cmp.config.sources({
+      { name = "nvim_lsp" },
       { name = "luasnip" },
       { name = "buffer" },
       { name = "path" },
